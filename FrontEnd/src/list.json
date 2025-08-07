@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "The Lost Forest",
+    "title": "An adventure through forgotten woods",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dream Chronicles",
+    "title": "Stories that whisper in your sleep",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Legends of Time",
+    "title": "Travel through the ages of myth",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Echoes in the Dark",
+    "title": "Mystery lingers where light fades",
+    "price": 4.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Starlight Stories",
+    "title": "Tales from the edge of the universe",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Whispers of the Sea",
+    "title": "Ocean secrets unfold in each wave",
+    "price": 3.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 7,
+    "name": "The Hidden City",
+    "title": "Uncover the secrets of a lost civilization",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Beyond the Horizon",
+    "title": "Chasing dreams where skies end",
+    "price": 2.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 9,
+    "name": "The Enchanted Library",
+    "title": "Where every book tells a living tale",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 10,
+    "name": "The Silent Kingdom",
+    "title": "A realm of shadows and silent kings",
+    "price": 6.49,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Winds of Change",
+    "title": "A revolution told in pages",
+    "price": 0,
+    "category": "Free",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Crimson Empire",
+    "title": "Power, betrayal, and the fall of kings",
+    "price": 5.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Code of Shadows",
+    "title": "Secrets behind the digital veil",
+    "price": 4.49,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 14,
+    "name": "The Alchemist’s Heir",
+    "title": "A legacy of magic and danger",
+    "price": 6.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Frozen Echoes",
+    "title": "A journey into the forgotten north",
+    "price": 3.99,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  },
+  {
+    "id": 16,
+    "name": "City of Glass",
+    "title": "A dystopian tale of rebellion",
+    "price": 7.49,
+    "category": "Paid",
+    "image": "./Book.jpg"
+  }
+]
