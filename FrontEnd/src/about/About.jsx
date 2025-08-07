@@ -13,7 +13,6 @@ function About() {
       <Navbar />
       <div className="bg-gray-900 min-h-screen py-16 mt-15">
         <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-          {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6">
               About <span className="text-blue-400">Literary Haven</span>
@@ -25,10 +24,6 @@ function About() {
             </p>
           </div>
 
-          {/* Our Story Section */}
-          {/* ... (unchanged) */}
-
-          {/* Mission, Vision, Values */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -41,7 +36,6 @@ function About() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Mission */}
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200">
                 <div className={iconWrapper}>
                   <svg
@@ -67,7 +61,6 @@ function About() {
                 </p>
               </div>
 
-              {/* Vision */}
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200">
                 <div className={iconWrapper}>
                   <svg
@@ -93,7 +86,6 @@ function About() {
                 </p>
               </div>
 
-              {/* Values */}
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200">
                 <div className={iconWrapper}>
                   <svg
@@ -124,7 +116,6 @@ function About() {
             </div>
           </div>
 
-          {/* What Makes Us Special */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -137,7 +128,6 @@ function About() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Curated Selection */}
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center hover:scale-105 transition-transform duration-200">
                 <div className={bigIconWrapper}>
                   <svg
@@ -162,7 +152,6 @@ function About() {
                 </p>
               </div>
 
-              {/* Community Events */}
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center hover:scale-105 transition-transform duration-200">
                 <div className={bigIconWrapper}>
                   <svg
@@ -187,7 +176,6 @@ function About() {
                 </p>
               </div>
 
-              {/* Personal Service */}
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center hover:scale-105 transition-transform duration-200">
                 <div className={bigIconWrapper}>
                   <svg
@@ -212,7 +200,6 @@ function About() {
                 </p>
               </div>
 
-              {/* Rare Collections */}
               <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center hover:scale-105 transition-transform duration-200">
                 <div className={bigIconWrapper}>
                   <svg
@@ -238,8 +225,6 @@ function About() {
               </div>
             </div>
           </div>
-
-          {/* The rest (Team, CTA, Awards) remains unchanged */}
         </div>
       </div>
       <Footer />

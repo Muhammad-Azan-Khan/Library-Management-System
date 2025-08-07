@@ -13,10 +13,8 @@ function ChangePassword() {
     formState: { errors },
     reset,
   } = useForm();
-
   const [authUser] = useAuth();
   const navigate = useNavigate();
-
   const [showCurrent, setShowCurrent] = useState(false);
   const [showNew, setShowNew] = useState(false);
 
@@ -70,19 +68,16 @@ function ChangePassword() {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         id="change-password-backdrop"
         className="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
       ></div>
 
-      {/* Modal */}
       <dialog
         id="change-password-modal"
         className="modal modal-bottom sm:modal-middle z-50"
       >
         <div className="modal-box bg-gray-900 text-white relative">
-          {/* Close Button */}
           <button
             onClick={handleClose}
             className="btn btn-sm btn-circle absolute right-3 top-3 text-white bg-gray-700 hover:bg-gray-600 border-none"
@@ -94,7 +89,6 @@ function ChangePassword() {
           <h2 className="text-2xl font-semibold mb-4">Change Password</h2>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            {/* Current Password */}
             <div className="relative">
               <label className="block mb-1 text-sm">Current Password</label>
               <input
@@ -119,7 +113,6 @@ function ChangePassword() {
               )}
             </div>
 
-            {/* New Password */}
             <div className="relative">
               <label className="block mb-1 text-sm">New Password</label>
               <input
@@ -144,7 +137,6 @@ function ChangePassword() {
               )}
             </div>
 
-            {/* Email */}
             <div>
               <label className="block mb-1 text-sm">Email</label>
               <input

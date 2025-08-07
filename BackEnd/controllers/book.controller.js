@@ -10,39 +10,6 @@ export const getBook = async (req, res) => {
   }
 };
 
-// export const createBook = async (req, res) => {
-//   try {
-//     const { name, title } = req.body;
-//     const imageurl = req.file;
-
-//     if (!name) {
-//       return res.status(400).json({ message: "Name is required!" });
-//     }
-//     if (!title) {
-//       return res.status(400).json({ message: "Title is required!" });
-//     }
-//     if (!imageurl) {
-//       return res.status(400).json({ message: "Image is required!" });
-//     }
-
-//     const newBook = await Book.create({
-//       name,
-//       title,
-//       image: `http://localhost:4001/uploads/${imageurl.filename}`,
-//       category: "free",
-//       price: 0,
-//     });
-
-//     res.status(201).json({
-//       message: "Book created successfully",
-//       book: newBook,
-//     });
-//   } catch (error) {
-//     console.log("Error", error);
-//     res.status(500).json({ message: "Internal Server Error" });
-//   }
-// };
-
 export const createBook = async (req, res) => {
   try {
     const { name, title, userId } = req.body;
@@ -61,7 +28,7 @@ export const createBook = async (req, res) => {
       image: `http://localhost:4001/uploads/${imageurl.filename}`,
       category: "free",
       price: 0,
-      uploadedby: userId, // Reference to the User model
+      uploadedby: userId,
     });
 
     res.status(201).json({
@@ -99,7 +66,6 @@ export const deleteBook = async (req, res) => {
       return res.status(404).json({ message: "Book not found" });
     }
 
-    // ✅ Use deleteOne instead of remove (avoid error on .remove)
     await Book.deleteOne({ _id: id });
 
     res.status(200).json({ message: "Book deleted successfully" });

@@ -1,126 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-// import axios from "axios";
-
-// import Cards from "./Cards";
-
-// function FreeBooks() {
-//   const [book, setBook] = useState([]);
-
-//   const getBook = async () => {
-//     try {
-//       const res = await axios.get("http://localhost:4001/book");
-
-//       setBook(res.data);
-//     } catch (error) {
-//       console.error("Error fetching books:", error);
-//     }
-//   };
-
-//   useEffect(() => {
-//     getBook();
-//   }, []);
-
-//   const filterData = book.filter((data) => data.category === "Free");
-
-//   var settings = {
-//     dots: true,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-//     initialSlide: 0,
-//     dotsClass: "slick-dots custom-dots",
-//     arrows: true, // keep arrows by default for desktop
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//           infinite: true,
-//           dots: true,
-//           arrows: true, // show arrows on tablets
-//         },
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//           initialSlide: 2,
-//           arrows: false, // hide arrows on smaller devices
-//         },
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//           arrows: false, // hide arrows on phones
-//         },
-//       },
-//     ],
-//   };
-
-//   return (
-//     <div className="bg-gray-900 py-16">
-//       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-//         <div className="mb-12 text-center">
-//           <h1 className="font-bold text-3xl lg:text-4xl pb-4 text-white">
-//             Free Offered <span className="text-blue-400">Books</span>
-//           </h1>
-//           <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-//             Discover our collection of free books across various genres. From
-//             classic literature to contemporary fiction, expand your library
-//             without spending a penny.
-//           </p>
-//         </div>
-
-//         <div className="slider-container">
-//           <Slider {...settings}>
-//             {filterData.map((item) => (
-//               <Cards item={item} key={item.id} />
-//             ))}
-//           </Slider>
-//         </div>
-//       </div>
-
-//       <style>{`
-//   .custom-dots {
-//     bottom: -50px;
-//   }
-//   .custom-dots li button:before {
-//     color: #60a5fa;
-//     font-size: 12px;
-//   }
-//   .custom-dots li.slick-active button:before {
-//     color: #2563eb;
-//   }
-//   .slick-prev:before,
-//   .slick-next:before {
-//     color: #60a5fa;
-//     font-size: 20px;
-//   }
-//   .slick-prev,
-//   .slick-next {
-//     z-index: 1;
-//   }
-//   .slick-prev {
-//     left: -30px;
-//   }
-//   .slick-next {
-//     right: -30px;
-//   }
-// `}</style>
-//     </div>
-//   );
-// }
-
-// export default FreeBooks;
-
 import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -131,20 +8,13 @@ import Cards from "./Cards";
 
 function FreeBooks() {
   const [book, setBook] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   const getBook = async () => {
     try {
-      setLoading(true);
-      setError(null);
       const res = await axios.get("http://localhost:4001/api/book");
       setBook(res.data);
     } catch (error) {
       console.error("Error fetching books:", error);
-      setError("Failed to load books. Please try again later.");
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -197,7 +67,6 @@ function FreeBooks() {
   return (
     <div className="bg-gray-900 py-20 overflow-hidden">
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 relative z-10">
-        {/* Header Section */}
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-4 py-2 text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4 text-blue-400" />
@@ -232,13 +101,10 @@ function FreeBooks() {
           </div>
         </div>
 
-        {/* Slider */}
         <div className="slider-container mb-12 md: px-3">
           <Slider {...settings}>
             {filterData.map((item) => (
               <div key={item._id || item.id} className="md:px-3">
-                {" "}
-                {/* 👈 Gap wrapper */}
                 <Cards item={item} />
               </div>
             ))}
@@ -246,7 +112,6 @@ function FreeBooks() {
         </div>
       </div>
 
-      {/* Custom Styles */}
       <style jsx global>{`
         .custom-dots {
           bottom: -60px;

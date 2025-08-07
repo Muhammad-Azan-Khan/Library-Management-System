@@ -10,12 +10,9 @@ function Cards({ item }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* 3D Glow Effect */}
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
 
-        {/* Main Card */}
         <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-500">
-          {/* Image Section */}
           <figure className="relative h-56 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent z-10"></div>
             <img
@@ -27,7 +24,6 @@ function Cards({ item }) {
               className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
             />
 
-            {/* Floating Circles */}
             {isHovered && (
               <>
                 <div className="absolute top-1/4 left-4 animate-bounce">
@@ -43,9 +39,7 @@ function Cards({ item }) {
             )}
           </figure>
 
-          {/* Content */}
           <div className="p-6 relative">
-            {/* Title */}
             <div className="mb-3">
               <h2 className="relative font-bold text-lg leading-tight">
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent blur-sm">
@@ -57,21 +51,12 @@ function Cards({ item }) {
               </h2>
             </div>
 
-            {/* Description */}
             <p className="text-gray-300 text-sm mb-4 line-clamp-2 leading-relaxed">
               {item.description ||
                 item.title ||
                 "A wonderful book waiting to be discovered in our literary collection."}
             </p>
 
-            {/* Author */}
-            {/* {item.author && (
-              <p className="text-blue-400 text-xs mb-3 font-medium">
-                by {item.author}
-              </p>
-            )} */}
-
-            {/* Price & Button */}
             <div className="flex items-center justify-between">
               <div className="relative">
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent blur-sm text-xl font-bold">
@@ -90,7 +75,6 @@ function Cards({ item }) {
               </button>
             </div>
 
-            {/* Rating */}
             <div className="flex items-center gap-1 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {[...Array(5)].map((_, i) => (
                 <span
@@ -108,11 +92,9 @@ function Cards({ item }) {
             </div>
           </div>
 
-          {/* Border Highlight */}
           <div className="absolute inset-0 rounded-2xl border border-transparent bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
         </div>
 
-        {/* Shadow Glow */}
         <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/10 to-purple-600/10 blur-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
       </div>
     </div>

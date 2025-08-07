@@ -7,12 +7,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import ChangePassword from "./components/ChangePassword";
 import Dashboard from "./components/Dashboard";
 import { Toaster } from "react-hot-toast";
-import { useAuth } from "./context/AuthProvider";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const [authUser] = useAuth();
-
   return (
     <>
       <Routes>

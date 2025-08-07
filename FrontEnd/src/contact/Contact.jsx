@@ -7,7 +7,6 @@ function Contact() {
       <Navbar />
       <div className="bg-gray-900 min-h-screen py-16 mt-15">
         <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-          {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Contact Our <span className="text-blue-400">Bookstore</span>
@@ -20,7 +19,6 @@ function Contact() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">
@@ -30,7 +28,6 @@ function Contact() {
               </div>
 
               <div className="space-y-6">
-                {/* Email */}
                 <div className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200">
                   <div className="bg-blue-600 p-3 rounded-full">
                     <svg
@@ -58,7 +55,6 @@ function Contact() {
                   </div>
                 </div>
 
-                {/* Phone */}
                 <div className="flex items-start space-x-4 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200">
                   <div className="bg-blue-600 p-3 rounded-full">
                     <svg
@@ -85,9 +81,6 @@ function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* You can keep About Us section as-is since it doesn’t use icons from imports,
-              or replace BookOpen, Users, Award, Globe with manual SVGs too — let me know if you'd like that. */}
           </div>
         </div>
       </div>

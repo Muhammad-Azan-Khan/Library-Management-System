@@ -44,19 +44,16 @@ function Signup() {
 
   return (
     <>
-      {/* Background Blur */}
       <div
         id="signup-backdrop"
         className="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
       ></div>
 
-      {/* Signup Modal */}
       <dialog
         id="my_modal_6"
         className="modal modal-bottom sm:modal-middle z-50"
       >
         <div className="modal-box bg-gray-900 text-white relative">
-          {/* Close Button */}
           <button
             onClick={() => {
               document.getElementById("my_modal_6").close();
@@ -131,13 +128,10 @@ function Signup() {
                 <a
                   className="text-blue-400 hover:underline cursor-pointer ml-1"
                   onClick={() => {
-                    // Close signup and its backdrop
                     document.getElementById("my_modal_6").close();
                     document
                       .getElementById("signup-backdrop")
                       .classList.add("hidden");
-
-                    // Show login and its backdrop
                     document
                       .getElementById("login-backdrop")
                       .classList.remove("hidden");

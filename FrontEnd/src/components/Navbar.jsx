@@ -11,9 +11,7 @@ function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur border-b border-white/10 shadow-md px-4 md:px-8">
       <div className="flex justify-between items-center h-16">
-        {/* Navbar Start */}
         <div className="flex items-center gap-4">
-          {/* Mobile Dropdown */}
           <div className="relative lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -73,7 +71,6 @@ function Navbar() {
             )}
           </div>
 
-          {/* Logo */}
           <Link
             to="/"
             className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
@@ -82,7 +79,6 @@ function Navbar() {
           </Link>
         </div>
 
-        {/* Center Nav (Desktop) */}
         <div className="hidden lg:flex items-center gap-6 text-white font-medium">
           <Link to="/" className="hover:text-blue-400 transition">
             Home
@@ -103,9 +99,7 @@ function Navbar() {
           )}
         </div>
 
-        {/* Navbar End */}
         <div className="flex items-center gap-4">
-          {/* Search */}
           <div className="hidden md:flex items-center bg-transparent border border-white/20 text-white rounded-md px-3 py-1 focus-within:border-blue-400 focus-within:ring-1 focus-within:ring-blue-400 transition">
             <svg
               className="h-5 w-5 opacity-50 mr-2"
@@ -124,7 +118,6 @@ function Navbar() {
             />
           </div>
 
-          {/* Auth */}
           {authUser ? (
             <Logout />
           ) : (

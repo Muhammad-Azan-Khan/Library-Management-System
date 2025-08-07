@@ -1,82 +1,3 @@
-// import poster from "../../public/Banner.png";
-
-// function Banner() {
-//   return (
-//     <div className="bg-gray-900 text-white mt-15">
-//       <div className="container mx-auto px-4 py-16 lg:py-24">
-//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-//           {/* Left side - Content */}
-//           <div className="space-y-6">
-//             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-//               Discover Your Next
-//               <span className="text-blue-400 block">Great Read</span>
-//             </h1>
-//             <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-lg">
-//               Welcome to our literary haven where stories come alive. Explore
-//               thousands of books across all genres, from timeless classics to
-//               contemporary bestsellers. Find your perfect escape in our
-//               carefully curated collection.
-//             </p>
-
-//             <div className="w-full max-w-md space-y-4">
-//               <label className="flex items-center gap-2 px-4 py-3 text-white bg-transparent border border-white/20 rounded-md text-base focus-within:ring-1 focus-within:ring-blue-300 focus-within:border-blue-300">
-//                 <svg
-//                   className="h-[1em] opacity-50 text-white"
-//                   xmlns="http://www.w3.org/2000/svg"
-//                   viewBox="0 0 24 24"
-//                 >
-//                   <g
-//                     strokeLinejoin="round"
-//                     strokeLinecap="round"
-//                     strokeWidth="2.5"
-//                     fill="none"
-//                     stroke="currentColor"
-//                   >
-//                     <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-//                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-//                   </g>
-//                 </svg>
-//                 <input
-//                   type="email"
-//                   required
-//                   placeholder="Enter your email..."
-//                   className="bg-transparent text-white placeholder-white/50 focus:outline-none w-full"
-//                 />
-//               </label>
-
-//               <div className="validator-hint hidden">Enter your email...</div>
-//               <button className="btn bg-blue-600 text-white hover:bg-blue-700 px-6">
-//                 Get Started
-//               </button>
-//             </div>
-//           </div>
-
-//           {/* Right side - Image */}
-//           <div className="relative">
-//             <div className="w-full overflow-hidden rounded-lg">
-//               <img
-//                 src={poster}
-//                 alt="Bookshelf"
-//                 className="w-full h-auto object-cover"
-//               />
-//             </div>
-
-//             {/* Floating elements for visual interest */}
-//             <div className="hidden md:block absolute -top-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-//               Free Shipping
-//             </div>
-//             <div className="hidden md:block absolute -bottom-4 -left-4 bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg border border-gray-700">
-//               24/7 Open
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Banner;
-
 import { useState, useEffect } from "react";
 import { Mail, Sparkles, BookOpen, Star } from "lucide-react";
 import poster from "../../public/Banner.png";
@@ -98,7 +19,6 @@ function Banner() {
 
   return (
     <div className="bg-gray-900 text-white mt-15">
-      {/* Background Particles and Glow */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60"></div>
         <div className="absolute top-40 right-20 w-1 h-1 bg-blue-300 rounded-full animate-ping opacity-40"></div>
@@ -131,9 +51,7 @@ function Banner() {
 
       <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
           <div className="space-y-8 ">
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-4 py-2 text-sm font-medium">
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -141,7 +59,6 @@ function Banner() {
               </span>
             </div>
 
-            {/* Heading */}
             <div className="relative">
               <h1 className="text-5xl lg:text-7xl font-black leading-tight">
                 <span className="relative inline-block">
@@ -165,17 +82,15 @@ function Banner() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-2xl -z-10 animate-pulse"></div>
             </div>
 
-            {/* Description */}
             <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl font-light">
-              Welcome to our{" "}
+              Welcome to our
               <span className="text-blue-400 font-semibold">
                 literary haven
-              </span>{" "}
+              </span>
               where stories come alive. Explore thousands of books across all
               genres, from timeless classics to contemporary bestsellers.
             </p>
 
-            {/* Subscription */}
             <div className="w-full max-w-md space-y-6">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
@@ -203,7 +118,6 @@ function Banner() {
             </div>
           </div>
 
-          {/* Right Image (Manual img instead of Image component) */}
           <div className="relative group">
             <div className="relative transform group-hover:scale-105 transition-all duration-700 perspective-1000">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -223,7 +137,6 @@ function Banner() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-2xl -z-10 opacity-50 group-hover:opacity-75 transition-opacity duration-700"></div>
             </div>
 
-            {/* Floating Tags */}
             <div className="absolute -top-6 -right-6 transform hover:scale-110 transition-all duration-300">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full blur opacity-50"></div>
@@ -243,7 +156,6 @@ function Banner() {
               </div>
             </div>
 
-            {/* Floating Book Shapes */}
             <div className="absolute top-10 left-10 animate-float">
               <div className="w-8 h-10 bg-gradient-to-b from-blue-500 to-blue-600 rounded-sm shadow-lg rotate-12 opacity-80"></div>
             </div>
@@ -257,7 +169,6 @@ function Banner() {
         </div>
       </div>
 
-      {/* Floating Animations */}
       <style jsx>{`
         @keyframes float {
           0%,

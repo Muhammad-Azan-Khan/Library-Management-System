@@ -4,7 +4,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Cards from "./Cards";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
-
 import { BookOpen, Sparkles, Star, Trash2 } from "lucide-react";
 import Navbar from "./Navbar";
 import { useAuth } from "../context/AuthProvider";
@@ -16,7 +15,6 @@ function Dashboard() {
   const [books, setBooks] = useState([]);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedBookId, setSelectedBookId] = useState(null);
-
   const { register, handleSubmit, reset } = useForm();
 
   const fetchUserBooks = async () => {
@@ -113,7 +111,6 @@ function Dashboard() {
     <>
       <Navbar />
       <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen overflow-hidden text-white">
-        {/* Glows */}
         <div className="absolute inset-0">
           <div
             className="absolute w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"
@@ -138,7 +135,6 @@ function Dashboard() {
         </div>
 
         <div className="max-w-screen-2xl mx-auto px-4 py-8 relative z-10">
-          {/* Welcome Section */}
           <div className="text-center mb-16 pt-20">
             <div className="inline-flex gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-full px-4 py-2 text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 text-blue-400" />
@@ -163,7 +159,6 @@ function Dashboard() {
             </p>
           </div>
 
-          {/* Profile + Change Password */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-gray-800/60 p-8 rounded-2xl shadow-2xl border border-gray-700 mb-16">
             <div>
               <div className="flex items-center gap-4 mb-6">
@@ -211,7 +206,6 @@ function Dashboard() {
             </div>
           </div>
 
-          {/* Liked Books */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Liked Books</h2>
             {likedBooks.length === 0 ? (
@@ -234,7 +228,6 @@ function Dashboard() {
             )}
           </div>
 
-          {/* Uploaded Books */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Your Uploads</h2>
             {books.length === 0 ? (
@@ -256,7 +249,6 @@ function Dashboard() {
             )}
           </div>
 
-          {/* Upload New Book */}
           <div className="relative rounded-xl p-6 mb-16 border border-gray-700 bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-lg shadow-lg transition hover:shadow-green-500/20">
             <div className="absolute inset-0 rounded-xl bg-green-500/10 blur-xl opacity-20 animate-pulse pointer-events-none"></div>
             <h2 className="text-3xl font-extrabold mb-6 text-white">
@@ -300,7 +292,6 @@ function Dashboard() {
             </form>
           </div>
 
-          {/* Global Delete Modal */}
           <DeleteConfirmationModal
             open={showDeleteModal}
             onClose={() => setShowDeleteModal(false)}

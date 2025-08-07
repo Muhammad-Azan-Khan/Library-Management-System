@@ -12,7 +12,6 @@ function Login() {
   } = useForm();
 
   const navigate = useNavigate();
-
   const [authUser, setAuthUser] = useAuth();
 
   const onSubmit = async (data) => {
@@ -43,19 +42,16 @@ function Login() {
 
   return (
     <>
-      {/* Background Blur */}
       <div
         id="login-backdrop"
         className="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
       ></div>
 
-      {/* Login Modal */}
       <dialog
         id="my_modal_5"
         className="modal modal-bottom sm:modal-middle z-50"
       >
         <div className="modal-box bg-gray-900 text-white relative">
-          {/* Close Button */}
           <button
             onClick={() => {
               document.getElementById("my_modal_5").close();
@@ -67,10 +63,8 @@ function Login() {
             ✕
           </button>
 
-          {/* Heading */}
           <h3 className="font-bold text-xl mb-4">Login</h3>
 
-          {/* Main Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <label className="block text-sm mb-1">Email</label>
@@ -115,7 +109,7 @@ function Login() {
                 <a
                   className="text-blue-400 hover:underline cursor-pointer ml-1"
                   onClick={() => {
-                    handleClose(); // close login + backdrop
+                    handleClose();
                     document
                       .getElementById("signup-backdrop")
                       .classList.remove("hidden");

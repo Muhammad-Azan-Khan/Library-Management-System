@@ -13,6 +13,6 @@ router.post("/", upload.single("image"), createBook);
 
 router.post("/userbooks", getUserBooks);
 
-router.delete("/:id", deleteBook); // ✅ must use :id
+router.delete("/:id", deleteBook);
 
 export default router;
